@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd">
+<FBType Name="WAREHOUSE" OpcUa="POINT.STARTPOINT">
+    <InterfaceList>
+        <EventInputs>
+            <Event Name="INIT" Type="Event">
+                <With Var="CAMERA_NAME"/>
+                <With Var="NETWORK_NAME"/>
+            </Event>
+            <Event Name="READ" Type="Event"/>
+        </EventInputs>
+        <EventOutputs>
+            <Event Name="INIT_O" Type="Event"/>
+            <Event Name="READ_O" Type="Event">
+                <With Var="UNLOAD_1"/>
+                <With Var="UNLOAD_2"/>
+                <With Var="UNLOAD_3"/>
+            </Event>
+        </EventOutputs>
+        <InputVars>
+            <VarDeclaration Name="CAMERA_NAME" Type="STRING" OpcUa="Variable.RUN"/>
+            <VarDeclaration Name="NETWORK_NAME" Type="STRING" OpcUa="Variable.RUN"/>
+        </InputVars>
+        <OutputVars>
+            <VarDeclaration Name="UNLOAD_1" Type="INT" OpcUa="Variable.RUN"/>
+            <VarDeclaration Name="UNLOAD_2" Type="INT" OpcUa="Variable.RUN"/>
+            <VarDeclaration Name="UNLOAD_3" Type="INT" OpcUa="Variable.RUN"/>
+        </OutputVars>
+    </InterfaceList>
+</FBType>

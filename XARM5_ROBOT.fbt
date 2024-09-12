@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd">
+<FBType Name="XARM5_ROBOT" OpcUa="POINT.STARTPOINT">
+    <InterfaceList>
+        <EventInputs>
+            <Event Name="INIT" Type="Event">
+                <With Var="ROBOT_IP"/>
+            </Event>
+            <Event Name="READ" Type="Event">
+                <With Var="OPCUA_GRAB"/>
+                <With Var="UNLOAD_1"/>
+                <With Var="UNLOAD_2"/>
+                <With Var="UNLOAD_3"/>
+            </Event>
+        </EventInputs>
+        <EventOutputs>
+            <Event Name="INIT_O" Type="Event"/>
+            <Event Name="READ_O" Type="Event"/>
+        </EventOutputs>
+        <InputVars>
+            <VarDeclaration Name="ROBOT_IP" Type="STRING" OpcUa="Variable.RUN"/>
+            <VarDeclaration Name="OPCUA_GRAB" Type="BOOL" OpcUa="Variable.RUN"/>
+            <VarDeclaration Name="UNLOAD_1" Type="INT" OpcUa="Variable.RUN"/>
+            <VarDeclaration Name="UNLOAD_2" Type="INT" OpcUa="Variable.RUN"/>
+            <VarDeclaration Name="UNLOAD_3" Type="INT" OpcUa="Variable.RUN"/>
+        </InputVars>
+        <OutputVars>
+        </OutputVars>
+    </InterfaceList>
+</FBType>
