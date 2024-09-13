@@ -95,6 +95,8 @@ Open the `System Configuration` tab and build the following schematic using the 
 
 Open the `<workspace_name>App` tab and build the following schematic using the components added before to the Pallete:
 
+![system_app](https://github.com/user-attachments/assets/8d137549-0138-4a95-9a01-0835e371e28b)
+
 **OPCUA_BOOL_VARIABLE_LISTENER** inputs:
  - endpoint_url: `opc.tcp://10.227.17.233:4840`
  - node_id: `ns=4;s=|var|CODESYS Control for Raspberry Pi 64 SL.Application.GVL.robot2grab`
@@ -107,8 +109,6 @@ Open the `<workspace_name>App` tab and build the following schematic using the c
  - ROBOT_IP: `10.227.17.245`
 
 After building, the function blocks need to be mapped, for this: right-click on the block -> `Map to ...` -> `RaspberryPI` -> `EMB_RES`
-
-![system_app](https://github.com/user-attachments/assets/8d137549-0138-4a95-9a01-0835e371e28b)
 
 #### 3.6 Deploy the System
 
