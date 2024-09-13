@@ -17,6 +17,10 @@ This project enables the control of the **xArm5** robotic arm and integrates it 
 
 ## ⚙️ Software Description
 
+  - [`OPCUA_BOOL_VARIABLE_LISTENER.fbt`](OPCUA_BOOL_VARIABLE_LISTENER.fbt): defines the OPCUA_BOOL_VARIABLE_LISTENER Function Block structure.
+  
+  - [`OPCUA_BOOL_VARIABLE_LISTENER.py`](OPCUA_BOOL_VARIABLE_LISTENER.py): listens OPC UA variables, establishes communication with the FESTO Modular Production System.
+
   - [`WAREHOUSE.fbt`](WAREHOUSE.fbt): defines the WAREHOUSE Function Block structure.
   
   - [`WAREHOUSE.py`](WAREHOUSE.py): manages the YOLOv8 object detection using a camera to identify pieces ready to be rearranged or unloaded.
@@ -40,9 +44,13 @@ Follow these steps to get your system up and running:
 Open your terminal or command prompt and change to the Dinasore directory:
 
  ```bash
- cd /path/to/dinasore
+ cd /path/to/dinasore-2.0
  ```
-#### 2.2 Execute Dinasore
+#### 2.2 Add Function Blocks
+
+Copy the function blocks (`.fbt` and `.py` files) to the Dinasore resources directory `dinasore-2.0/resources/function_blocks/`
+
+#### 2.3 Execute Dinasore
 
 Start the Dinasore application by running:
 
@@ -54,17 +62,21 @@ Start the Dinasore application by running:
 
 #### 3.1 Create the System Configuration
 
+Copy the function blocks (`.fbt` and `.py` files) to the 4DIAC workspace `4diac-ide-1.11/4diac-ide/workspace/<workspace_name>/`
+
+#### 3.2 Create the System Configuration
+
 Open the 4DIAC-IDE and construct the system schematic as shown below:
 
 (IMAGE TO BE ADDED LATER)
 
-#### 3.2 Create the System Configuration
+#### 3.3 Create the System Configuration
 
 Build the main program by adding and connecting the function blocks:
 
 (IMAGE TO BE ADDED LATER)
 
-#### 3.3 Deploy the System
+#### 3.4 Deploy the System
 
 Deploy your configuration to the system.
 
