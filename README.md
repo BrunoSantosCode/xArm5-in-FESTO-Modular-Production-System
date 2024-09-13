@@ -56,9 +56,13 @@ Start the Dinasore application by running:
 
 Open the 4DIAC-IDE and construct the system schematic as shown below:
 
+(IMAGE TO BE ADDED LATER)
+
 #### 3.2 Create the System Configuration
 
 Build the main program by adding and connecting the function blocks:
+
+(IMAGE TO BE ADDED LATER)
 
 #### 3.3 Deploy the System
 
