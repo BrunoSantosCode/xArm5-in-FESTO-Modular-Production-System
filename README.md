@@ -27,8 +27,48 @@ This project enables the control of the **xArm5** robotic arm and integrates it 
 
 ## 🚀 How to Run
 
-TO BE DONE
-    
+Follow these steps to get your system up and running:
+
+### 1. Power Up the FESTO Modular Production System
+
+ Ensure that the FESTO Modular Production System is turned on and fully operational.
+
+### 2. Run Dinasore
+
+#### 2.1 Navigate to the Dinasore Directory
+
+Open your terminal or command prompt and change to the Dinasore directory:
+
+ ```bash
+ cd /path/to/dinasore
+ ```
+#### 2.2 Execute Dinasore
+
+Start the Dinasore application by running:
+
+ ```bash
+ python3 core/main.py
+ ```
+
+### 3. Configure 4DIAC-IDE
+
+#### 3.1 Create the System Configuration
+
+Open the 4DIAC-IDE and construct the system schematic as shown below:
+
+#### 3.2 Create the System Configuration
+
+Build the main program by adding and connecting the function blocks:
+
+#### 3.3 Deploy the System
+
+Deploy your configuration to the system.
+
+### Final Step
+
+The robot should now initialize and start operating.
+
+
 ## 📫 Contact
 
 Developed by Bruno Santos in DIGI2 Lab
