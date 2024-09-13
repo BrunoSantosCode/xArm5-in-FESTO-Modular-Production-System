@@ -15,7 +15,7 @@ The robot works alongside a camera system powered by **YOLOv8** for detecting ob
  - **Robot Arm**: xArm5 (UFACTORY)
  - **Camera**: ZED mini (depth not utilised)
  - **Neural Network**: YOLOv8
- - **Development Environment**: [dinasore 2.0](https://github.com/DIGI2-FEUP/dinasore), 4DIAC-IDE 1.11
+ - **Development Environment**: [dinasore 2.0](https://github.com/DIGI2-FEUP/dinasore), [4DIAC-IDE 1.11.0](https://eclipse.dev/4diac/en_dow.php), [Java](https://www.java.com/pt-BR/download/manual.jsp) (Windows Off-line (64 bits) recommended for Windows)
 
 ### 🎥 Watch the Robots in Action
  To see the xArm5 in operation, check out the **YouTube demo video**:  
@@ -52,11 +52,16 @@ Open your terminal or command prompt and change to the Dinasore directory:
  ```bash
  cd /path/to/dinasore-2.0
  ```
+
 #### 2.2 Add Function Blocks
 
 Copy the function blocks (`.fbt` and `.py` files) to the Dinasore resources directory `dinasore-2.0/resources/function_blocks/`
 
-#### 2.3 Execute Dinasore
+#### 2.3 Add YOLOv8 Model
+
+Copy the [`yolov8_sorting_factory_v2.pt`](yolov8_sorting_factory_v2.pt) file to the Dinasore directory `dinasore-2.0/`
+
+#### 2.4 Execute Dinasore
 
 Start the Dinasore application by running:
 
@@ -66,25 +71,48 @@ Start the Dinasore application by running:
 
 ### 3. Configure 4DIAC-IDE
 
-#### 3.1 Create the System Configuration
+#### 3.1 Launch Workspace
 
-Copy the function blocks (`.fbt` and `.py` files) to the 4DIAC workspace `4diac-ide-1.11/4diac-ide/workspace/<workspace_name>/`
+Open 4DIAC-IDE and click `Launch` to launch the default workspace
 
-#### 3.2 Create the System Configuration
+#### 3.2 Create a New System
 
-Open the 4DIAC-IDE and construct the system schematic as shown below:
-
-(IMAGE TO BE ADDED LATER)
+Chose `Create New System` option, then enter the `<workspace_name>` and click `Finish`
 
 #### 3.3 Create the System Configuration
 
-Build the main program by adding and connecting the function blocks:
+Copy the function blocks (`.fbt` and `.py` files) to the 4DIAC workspace `4diac-ide-1.11/4diac-ide/workspace/<workspace_name>/xArm5/`
 
-(IMAGE TO BE ADDED LATER)
+📝 Note: You may need to restart the 4DIAC-IDE in order to the new function blocks appear in the Pallete.
 
-#### 3.4 Deploy the System
+#### 3.4 Create the System Configuration
 
-Deploy your configuration to the system.
+Open the `System Configuration` tab and build the following schematic using the components in the Pallete:
+
+![system_conf](https://github.com/user-attachments/assets/3a492057-6bf1-4bc0-9926-caf9315dd2d5)
+
+#### 3.5 Create the Main Application
+
+Open the `<workspace_name>App` tab and build the following schematic using the components added before to the Pallete:
+
+**OPCUA_BOOL_VARIABLE_LISTENER** inputs:
+ - endpoint_url: `opc.tcp://10.227.17.233:4840`
+ - node_id: `ns=4;s=|var|CODESYS Control for Raspberry Pi 64 SL.Application.GVL.robot2grab`
+
+**WAREHOUSE** inputs:
+ - CAMERA_NAME: `/dev/video4`
+ - NETWORK_NAME: `yolov8_sorting_factory_v2.pt`
+
+**XARM5_ROBOT** inputs:
+ - ROBOT_IP: `10.227.17.245`
+
+After building, the function blocks need to be mapped, for this: right-click on the block -> `Map to ...` -> `RaspberryPI` -> `EMB_RES`
+
+![system_app](https://github.com/user-attachments/assets/8d137549-0138-4a95-9a01-0835e371e28b)
+
+#### 3.6 Deploy the System
+
+Deploy the system by right-clicking the `<workspace_name>` in the left tab and then click `Deploy`
 
 ### Final Step
 
@@ -97,5 +125,5 @@ Developed by Bruno Santos in DIGI2 Lab
 
 Feel free to reach out via email: brunosantos@fe.up.pt
 
-Last updated in: ``12/09/2024``
+Last updated in: ``13/09/2024``
 
