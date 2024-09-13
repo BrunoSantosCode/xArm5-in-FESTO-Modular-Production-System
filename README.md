@@ -4,7 +4,13 @@ This repository contains the code developed in order to integrate a xArm5 roboti
 
 ## 📌 Project Overview
 
-This project enables the control of the **xArm5** robotic arm and integrates it with a warehouse system for **pick-and-place**, **rearrange** and **unload** operations. The robot works alongside a camera system powered by **YOLOv8** for detecting objects.
+This project enables the control of the **xArm5** robotic arm and integrates it with a warehouse system for **pick-and-place**, **rearrange** and **unload** operations. 
+
+The **pick-and-place** task is triggered by the presence of a component in the FESTO MPS ready to be moved from the Processing and Validation Station to the Sorting Station.
+
+The **rearrange** and **unload** tasks are triggered by the components detection in the Sorting Station by the camera and neural network.
+
+The robot works alongside a camera system powered by **YOLOv8** for detecting objects.
 
  - **Robot Arm**: xArm5 (UFACTORY)
  - **Camera**: ZED mini (depth not utilised)
