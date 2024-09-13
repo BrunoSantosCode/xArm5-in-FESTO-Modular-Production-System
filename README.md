@@ -110,6 +110,8 @@ Open the `<workspace_name>App` tab and build the following schematic using the c
 
 After building, the function blocks need to be mapped, for this: right-click on the block -> `Map to ...` -> `RaspberryPI` -> `EMB_RES`
 
+📝 Note: The system variables state can be seen in real time by clicking in `Debug` -> `Debug System` -> `<workspace_name>` and then right-clicking a function block -> `🔍 Watch`
+
 #### 3.6 Deploy the System
 
 Deploy the system by right-clicking the `<workspace_name>` in the left tab and then click `Deploy`
