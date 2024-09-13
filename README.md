@@ -9,7 +9,7 @@ This project enables the control of the **xArm5** robotic arm and integrates it 
  - **Robot Arm**: xArm5 (UFACTORY)
  - **Camera**: ZED mini (depth not utilised)
  - **Neural Network**: YOLOv8
- - **Development Environment**: [dinasore](https://github.com/DIGI2-FEUP/dinasore), 4DIAC-IDE
+ - **Development Environment**: [dinasore 2.0](https://github.com/DIGI2-FEUP/dinasore), 4DIAC-IDE 1.11
 
 ### 🎥 Watch the Robots in Action
  To see the xArm5 in operation, check out the **YouTube demo video**:  
