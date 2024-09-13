@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd">
+<FBType Name="OPCUA_BOOL_VARIABLE_LISTENER" OpcUa="DEVICE.SENSOR">
+    <InterfaceList>
+        <EventInputs>
+            <Event Name="INIT" Type="Event">
+                <With Var="endpoint_url"/>
+            </Event>
+            <Event Name="READ" Type="Event" OpcUa="Method">
+                <With Var="node_id"/>
+            </Event>
+        </EventInputs>
+        <EventOutputs>
+            <Event Name="INIT_O" Type="Event"/>
+            <Event Name="READ_O" Type="Event">
+                <With Var="status"/>
+                <With Var="value"/>
+            </Event>
+        </EventOutputs>
+        <InputVars>
+            <VarDeclaration Name="endpoint_url" Type="STRING" OpcUa="Constant"/>
+            <VarDeclaration Name="node_id" Type="STRING" OpcUa="Variable"/>
+        </InputVars>
+        <OutputVars>
+            <VarDeclaration Name="status" Type="STRING" OpcUa="Variable"/>
+            <VarDeclaration Name="value" Type="BOOL" OpcUa="Variable"/>
+        </OutputVars>
+    </InterfaceList>
+</FBType>
