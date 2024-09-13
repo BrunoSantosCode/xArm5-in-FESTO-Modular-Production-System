@@ -104,6 +104,7 @@ Open the `<workspace_name>App` tab and build the following schematic using the c
 **WAREHOUSE** inputs:
  - CAMERA_NAME: `/dev/video4`
  - NETWORK_NAME: `yolov8_sorting_factory_v2.pt`
+📝 Note: camera device name can vary in your system
 
 **XARM5_ROBOT** inputs:
  - ROBOT_IP: `10.227.17.245`
