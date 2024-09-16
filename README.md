@@ -35,6 +35,8 @@ The robot works alongside a camera system powered by **YOLOv8** for detecting ob
    
   - [`XARM5_ROBOT.py`](XARM5_ROBOT.py): controls the xArm5 robot using the XArmAPI in order to the robot execute all the necessary operations.
 
+  - [`camera_test.py`](camera_test.py): tests the camera device name in your system. In Windows it should look like `1`, `2`... and in Ubuntu it should look like `/dev/video0`, `/dev/video1`...
+
 ## 🚀 How to Run
 
 Follow these steps to get your system up and running:
