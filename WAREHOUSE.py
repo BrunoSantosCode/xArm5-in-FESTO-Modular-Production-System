@@ -71,14 +71,15 @@ class ZED():
         # Test camera
         ret, _ = self.cam.read()
         if not ret:
-            return -1
-
+            print('Camera NOT OK')
+            exit(-1)
 
     def capture(self):
         # Capture
         ret, frame = self.cam.read()
         if not ret:
-            return -1
+            print('Camera NOT OK')
+            exit(-1)
         # Keep only left side (for ZED)
         left_image = frame[:, :self.camera_width]
         # ROI
