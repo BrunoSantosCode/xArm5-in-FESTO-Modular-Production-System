@@ -19,7 +19,7 @@ The robot works alongside a camera system powered by **YOLOv8** for detecting ob
 
 ### 🎥 Watch the Robots in Action
  To see the xArm5 in operation, check out the **YouTube demo video**:  
- [Watch the video here (TO_BE_DONE)](TO_BE_DONE)
+ [Watch the video here (TO_BE_DONE)](https://youtu.be/dQw4w9WgXcQ)
 
 ## ⚙️ Software Description
 
