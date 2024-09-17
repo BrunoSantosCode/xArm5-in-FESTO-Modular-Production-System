@@ -5,6 +5,7 @@ This block gives as output:
 
 from ultralytics import YOLO
 import numpy as np
+import torch
 import cv2
 
 
@@ -12,6 +13,7 @@ class WAREHOUSE:
 
     def __init__(self):
         self.camera_name = ""
+        self.run_device = ""
         self.network_name = ""
         self.unload_1 = 0
         self.unload_2 = 0
@@ -27,9 +29,16 @@ class WAREHOUSE:
                 self.camera_name = camera_name
                 self.camera = ZED(camera_name)
                 print("Camera OK")
+                # Check if CUDA is available
+                if torch.cuda.is_available():
+                    print('CUDA available, running YOLOv8 on GPU')
+                    self.run_device = "cuda"
+                else:    
+                    print('WARNING: CUDA not available, running YOLOv8 on CPU')
+                    self.run_device = "cpu"
                 # Init YOLOv8
                 self.network_name = network_name
-                self.yolo = YOLOv8(network_name)
+                self.yolo = YOLOv8(network_name, self.run_device)
                 print("YOLO OK")
             return [event_value, event_value, self.unload_1, self.unload_2, self.unload_3]
 
@@ -93,14 +102,15 @@ class ZED():
 # YOLO Neural Network Class
 class YOLOv8():
 
-    def __init__(self, model):
+    def __init__(self, model, device):
         # Init YOLO
         self.model = YOLO(model, task="segment")
+        self.device = device
         self.results = None
 
     def detect(self, image):
         # Detect objects
-        self.results = self.model.predict(image, conf=0.75, device="cuda")
+        self.results = self.model.predict(image, conf=0.75, device=self.device)
         # Analyse results from YOLOv8
         for result in self.results:
             result.cpu().numpy()
