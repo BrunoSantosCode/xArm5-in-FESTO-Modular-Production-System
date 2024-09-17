@@ -37,6 +37,37 @@ The robot works alongside a camera system powered by **YOLOv8** for detecting ob
 
   - [`camera_test.py`](camera_test.py): tests the camera device name in your system. In Windows it should look like `1`, `2`... and in Ubuntu it should look like `/dev/video0`, `/dev/video1`...
 
+## 📦 Dependencies
+
+To run this project, the following dependencies are required:
+
+### 1. Python Packages
+
+Ensure that the following Python packages are installed:
+
+ ```bash
+  pip3 install ultralytics
+ ```
+ ```bash
+  git clone https://github.com/xArm-Developer/xArm-Python-SDK.git
+  cd xArm-Python-SDK
+  pip3 install .
+ ```
+ ```bash
+  pip3 install opencv-python
+ ```
+ ```bash
+  pip3 install opcua
+ ```
+
+### 2. NVIDIA CUDA Toolkit 12.1
+
+To leverage GPU acceleration, you need to install **NVIDIA CUDA Toolkit 12.1**. You can download it from the [official website](https://developer.nvidia.com/cuda-12-1-0-download-archive).
+
+### 3. PyTorch
+
+Install **PyTorch** following the instructions on the [PyTorch website](https://pytorch.org/get-started/locally/), ensuring compatibility with your system and CUDA version.
+
 ## 🚀 How to Run
 
 Follow these steps to get your system up and running:
