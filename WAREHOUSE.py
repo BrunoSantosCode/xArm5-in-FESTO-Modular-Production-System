@@ -71,7 +71,12 @@ class ZED():
 
     def __init__(self, device):
         # Create a Camera object
-        self.cam = cv2.VideoCapture(device)
+        if device.isdigit():
+            # Windows
+            self.cam = cv2.VideoCapture(int(device))
+        else:
+            # Ubuntu
+            self.cam = cv2.VideoCapture(device)
         # Set resolution
         self.camera_width = 1920
         self.camera_height = 1080
@@ -80,14 +85,14 @@ class ZED():
         # Test camera
         ret, _ = self.cam.read()
         if not ret:
-            print('Camera NOT OK')
+            print(f'ERROR: Unable to open camera {device}')
             exit(-1)
 
     def capture(self):
         # Capture
         ret, frame = self.cam.read()
         if not ret:
-            print('Camera NOT OK')
+            print('ERROR: Camera NOT OK')
             exit(-1)
         # Keep only left side (for ZED)
         left_image = frame[:, :self.camera_width]
