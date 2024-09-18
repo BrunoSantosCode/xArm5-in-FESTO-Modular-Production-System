@@ -128,7 +128,7 @@ Open the `System Configuration` tab and build the following schematic using the 
 
 Open the `<workspace_name>App` tab and build the following schematic using the components added before to the Pallete:
 
-![system_app](https://github.com/user-attachments/assets/8d137549-0138-4a95-9a01-0835e371e28b)
+![4diac_app](https://github.com/user-attachments/assets/697a38af-2831-48b6-bb57-4aa3517f04ea)
 
 **OPCUA_BOOL_VARIABLE_LISTENER** inputs:
  - endpoint_url: `opc.tcp://10.227.17.233:4840`
@@ -138,7 +138,7 @@ Open the `<workspace_name>App` tab and build the following schematic using the c
  - CAMERA_NAME: `/dev/video4`
  - NETWORK_NAME: `yolov8_sorting_factory_v2.pt`
 
-📝 Note: camera device name can vary in your system
+📝 Note: camera device name can vary on your system
 
 **XARM5_ROBOT** inputs:
  - ROBOT_IP: `10.227.17.245`
