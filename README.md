@@ -78,21 +78,21 @@ Follow these steps to get your system up and running:
 
 ### 2. Run Dinasore
 
-#### 2.1 Navigate to the Dinasore Directory
+#### 2.1 Add Function Blocks
+
+Copy the function blocks (`.fbt` and `.py` files) to the Dinasore resources directory `dinasore-2.0/resources/function_blocks/`
+
+#### 2.2 Add YOLOv8 Model
+
+Copy the [`yolov8_sorting_factory_v2.pt`](yolov8_sorting_factory_v2.pt) file to the Dinasore directory `dinasore-2.0/`
+
+#### 2.3 Navigate to the Dinasore Directory
 
 Open your terminal or command prompt and change to the Dinasore directory:
 
  ```bash
  cd /path/to/dinasore-2.0
  ```
-
-#### 2.2 Add Function Blocks
-
-Copy the function blocks (`.fbt` and `.py` files) to the Dinasore resources directory `dinasore-2.0/resources/function_blocks/`
-
-#### 2.3 Add YOLOv8 Model
-
-Copy the [`yolov8_sorting_factory_v2.pt`](yolov8_sorting_factory_v2.pt) file to the Dinasore directory `dinasore-2.0/`
 
 #### 2.4 Execute Dinasore
 
