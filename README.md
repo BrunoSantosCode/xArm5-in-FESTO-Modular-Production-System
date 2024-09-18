@@ -128,7 +128,7 @@ Open the `System Configuration` tab and build the following schematic using the 
 
 Open the `<workspace_name>App` tab and build the following schematic using the components added before to the Pallete:
 
-![4diac_app](https://github.com/user-attachments/assets/697a38af-2831-48b6-bb57-4aa3517f04ea)
+![4diac_app](https://github.com/user-attachments/assets/ef5c3480-b41e-45a0-a6a5-b69ba3656515)
 
 **OPCUA_BOOL_VARIABLE_LISTENER** inputs:
  - endpoint_url: `opc.tcp://10.227.17.233:4840`
