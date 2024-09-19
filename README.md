@@ -17,7 +17,7 @@ The robot works alongside a camera system powered by **YOLOv8** for detecting ob
  - **Neural Network**: YOLOv8
  - **Development Environment**: **Python 3.10.11**, [**dinasore 2.0**](https://github.com/DIGI2-FEUP/dinasore), [**4DIAC-IDE 1.11.0**](https://eclipse.dev/4diac/en_dow.php), [**Java**](https://www.java.com/pt-BR/download/manual.jsp) (Windows Off-line (64 bits) recommended for Windows)
 
-### 🎥 Watch the Robots in Action
+## 🎥 Watch the Robots in Action
  To see the xArm5 in operation, check out the **YouTube demo video**:  
  [Watch the video here (TO_BE_DONE)](https://youtu.be/dQw4w9WgXcQ)
 
