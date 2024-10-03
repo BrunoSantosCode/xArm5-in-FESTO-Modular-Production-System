@@ -115,7 +115,7 @@ class YOLOv8():
 
     def detect(self, image):
         # Detect objects
-        self.results = self.model.predict(image, conf=0.75, device=self.device)
+        self.results = self.model.predict(image, conf=0.75, iou=0.25, device="cuda")
         # Analyse results from YOLOv8
         for result in self.results:
             result.cpu().numpy()
