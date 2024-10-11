@@ -19,7 +19,7 @@ The robot works alongside a camera system powered by **YOLOv8** for detecting ob
 
 ## 🎥 Watch the Robots in Action
  To see the xArm5 in operation, check out the **YouTube demo video**:  
- [Watch the video here]([https://youtu.be/dQw4w9WgXcQ](https://youtu.be/WPR9UrtBXns))
+ [Watch the video here](https://youtu.be/WPR9UrtBXns)
 
 ## ⚙️ Software Description
 
@@ -162,5 +162,5 @@ Developed by Bruno Santos in DIGI2 Lab
 
 Feel free to reach out via email: brunosantos@fe.up.pt
 
-Last updated in: ``13/09/2024``
+Last updated in: ``11/10/2024``
 
