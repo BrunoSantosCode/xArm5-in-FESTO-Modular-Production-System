@@ -32,7 +32,7 @@ START_POSE = [0, -325.5, 207.5, 180, 0, -90]
 START_POSE_JOINTS = [-90.0, -27.2, -31.1, 58.3, 0.0]
 
 PICK_POSE_1 = [455.9, 253.6, 49.5, 180, 0, 90]
-PICK_POSE_2 = [543.4, 257.6, 50.5, 180, 0, 90]
+PICK_POSE_2 = [543.4, 257.6, 49.5, 180, 0, 90]
 PICK_POSE_3 = [623.3, 257.6, 50.5, 180, 0, 90]
 
 MIDDLE_POSE_SORTING = [325.7, 0, 200, 180, 0, 0]
@@ -46,7 +46,7 @@ MIDDLE_POSE_REPLACE = [543.7, 159.2, 138.0, 180, 0, 90]
 
 REPLACE_POSE_1 = [462.1, 59.2, 131.4, 180, 0, 90]
 REPLACE_POSE_2 = [544.0, 59.2, 131.4, 180, 0, 90]
-REPLACE_POSE_3 = [624.8, 59.2, 139.6, 180, 0, 90]
+REPLACE_POSE_3 = [627.5, 59.2, 139.6, 180, 0, 90]
 
 
 class XARM5_ROBOT:
@@ -280,6 +280,8 @@ class RobotMain(object):
             if self.is_alive:
                 pick_pose_plus = pick_pose[:]
                 pick_pose_plus[2] += PLUS_OFFSET
+                if pick_pose_plus[2] < 150:
+                    pick_pose_plus[2] = 150
                 place_pose_plus = place_pose[:]
                 place_pose_plus[2] += PLUS_OFFSET
                 # Picking

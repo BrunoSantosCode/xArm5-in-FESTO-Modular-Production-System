@@ -192,7 +192,7 @@ class ObjectsAnalyser():
                 if obj_x > rightmost_x:
                     rightmost_x = obj_x
                     rightmost_obj_color = obj["class"]
-        if (rightmost_x >= 770):
+        if (rightmost_x >= 750):
             # Return the position of the class in the color_zone dictionary
             return list(self.color_zone.keys()).index(rightmost_obj_color) + 1
         else:
