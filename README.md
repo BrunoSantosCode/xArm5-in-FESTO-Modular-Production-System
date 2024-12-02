@@ -128,14 +128,14 @@ Open the `System Configuration` tab and build the following schematic using the 
 
 Open the `<workspace_name>App` tab and build the following schematic using the components added before to the Pallete:
 
-![4diac_app](https://github.com/user-attachments/assets/ef5c3480-b41e-45a0-a6a5-b69ba3656515)
+![Screenshot from 2024-12-02 10-24-55](https://github.com/user-attachments/assets/ea2a3964-486d-4944-bf56-1dc8c558e69b)
 
 **OPCUA_BOOL_VARIABLE_LISTENER** inputs:
  - endpoint_url: `opc.tcp://10.227.17.233:4840`
  - node_id: `ns=4;s=|var|CODESYS Control for Raspberry Pi 64 SL.Application.GVL.robot2grab`
 
 **WAREHOUSE** inputs:
- - CAMERA_NAME: `/dev/video4`
+ - CAMERA_NAME: `4`
  - NETWORK_NAME: `yolov8_sorting_factory_v2.pt`
 
 📝 Note: camera device name can vary on your system
